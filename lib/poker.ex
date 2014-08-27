@@ -8,7 +8,8 @@ defmodule Poker do
 
     children = [
       # Define workers and child supervisors to be supervised
-      worker(Poker.Player, [])
+      worker(Poker.Player, []),
+      worker(Play.Chat, [])
     ]
 
     # See http://elixir-lang.org/docs/stable/elixir/Supervisor.html
