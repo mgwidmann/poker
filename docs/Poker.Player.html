@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Poker.Player</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+    <script type="text/javascript" charset="utf-8">
+      relpath = '';
+      if (relpath != '') relpath += '/';
+    </script>
+
+    <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+  </head>
+
+  <body>
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+
+    <div id="content">
+      <div class="breadcrumbs">poker v0.0.1 &rarr; <a href="overview.html">Overview</a> &rarr; <a href="Poker.html">Poker</a> &rarr; <a href="Poker.Player.html">Player</a></div>
+
+      <h1>
+        Poker.Player
+        
+      </h1>
+
+      <ul class="summary_links">
+        
+          <li><a href="#summary">Summary</a></li>
+        
+        
+          <li><a href="#functions_details">Functions</a></li>
+        
+        
+        
+        
+      </ul>
+
+      
+        <div id="moduledoc" class="docstring">
+          <p>  An erlang process representing the current player on each node. When each
+  node starts up, the <code class="inline">mix play</code> command will prompt the user to set this value
+  and it will stay that way throughout the game. A player’s name is used for
+  joining and identification purposes when chatting.</p>
+
+        </div>
+      
+
+      
+        <a href="https://github.com/mgwidmann/poker/blob/master/lib/poker/player.ex#L1" class="view_source">Source</a>
+      
+
+      
+        <h2 id="summary">Summary<div class="detail_header_links"><a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a></div></h2>
+        <table class="summary">
+          <tr>
+  <td class="summary_signature"><a href="#name/0">name()</a></td>
+  
+    <td class="summary_synopsis"><p>Get the player name of the local player on the current node.
+  Equivalent to <code class="inline">Poker.Player.process |&gt; Poker.Player.name</code></p>
+</td>
+  
+</tr>
+<tr>
+  <td class="summary_signature"><a href="#name/1">name(pid)</a></td>
+  
+    <td class="summary_synopsis"><p>Sets the local player’s name</p>
+</td>
+  
+</tr>
+<tr>
+  <td class="summary_signature"><a href="#process/0">process()</a></td>
+  
+    <td class="summary_synopsis"><p>Get the local player’s PID on the current node</p>
+</td>
+  
+</tr>
+<tr>
+  <td class="summary_signature"><a href="#start_link/0">start_link()</a></td>
+  
+</tr>
+<tr>
+  <td class="summary_signature"><a href="#start_link/1">start_link()</a></td>
+  
+</tr>
+
+        </table>
+      
+
+      
+
+      
+        <div id="functions_details" class="details_list">
+          <h2>Functions</h2>
+          <div class="detail">
+  <div class="detail_header" id="name/0">
+    <span class="signature"><strong>name()</strong></span>
+    <div class="detail_header_links">
+      <span class="detail_type">(function)</span>
+      <a href="#name/0" class="detail_link" title="Link to this function">#</a>
+      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
+    </div>
+  </div>
+  
+  <div class="docstring"><p>  Get the player name of the local player on the current node.
+  Equivalent to <code class="inline">Poker.Player.process |&gt; Poker.Player.name</code></p>
+</div>
+  
+    <a href="https://github.com/mgwidmann/poker/blob/master/lib/poker/player.ex#L47" class="view_source">Source</a>
+  
+</div>
+<div class="detail">
+  <div class="detail_header" id="name/1">
+    <span class="signature"><strong>name(pid)</strong></span>
+    <div class="detail_header_links">
+      <span class="detail_type">(function)</span>
+      <a href="#name/1" class="detail_link" title="Link to this function">#</a>
+      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
+    </div>
+  </div>
+  
+  <div class="docstring"><p>  Sets the local player’s name</p>
+<pre><code>iex&gt; Poker.Player.name(&quot;Joe&quot;)</code></pre>
+</div>
+  
+    <a href="https://github.com/mgwidmann/poker/blob/master/lib/poker/player.ex#L39" class="view_source">Source</a>
+  
+</div>
+<div class="detail">
+  <div class="detail_header" id="process/0">
+    <span class="signature"><strong>process()</strong></span>
+    <div class="detail_header_links">
+      <span class="detail_type">(function)</span>
+      <a href="#process/0" class="detail_link" title="Link to this function">#</a>
+      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
+    </div>
+  </div>
+  
+  <div class="docstring"><p>  Get the local player’s PID on the current node</p>
+<pre><code>iex&gt; Poker.Player.process
+#PID&lt;0.78.0&gt;</code></pre>
+</div>
+  
+    <a href="https://github.com/mgwidmann/poker/blob/master/lib/poker/player.ex#L31" class="view_source">Source</a>
+  
+</div>
+<div class="detail">
+  <div class="detail_header" id="start_link/0">
+    <span class="signature"><strong>start_link()</strong></span>
+    <div class="detail_header_links">
+      <span class="detail_type">(function)</span>
+      <a href="#start_link/0" class="detail_link" title="Link to this function">#</a>
+      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
+    </div>
+  </div>
+  
+  <div class="docstring"></div>
+  
+    <a href="https://github.com/mgwidmann/poker/blob/master/lib/poker/player.ex#L17" class="view_source">Source</a>
+  
+</div>
+<div class="detail">
+  <div class="detail_header" id="start_link/1">
+    <span class="signature"><strong>start_link()</strong></span>
+    <div class="detail_header_links">
+      <span class="detail_type">(function)</span>
+      <a href="#start_link/1" class="detail_link" title="Link to this function">#</a>
+      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
+    </div>
+  </div>
+  
+  <div class="docstring"></div>
+  
+    <a href="https://github.com/mgwidmann/poker/blob/master/lib/poker/player.ex#L21" class="view_source">Source</a>
+  
+</div>
+
+        </div>
+      
+
+      
+
+      
+    </div>
+  </body>
+</html>

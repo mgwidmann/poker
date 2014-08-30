@@ -7,7 +7,6 @@ defmodule Play.Constants do
         /help <comamnd>              -  Displays more helpful information about that command
         /join <node1> <node2> ...    -  Join an existing Poker node network
         /list                        -  List the names of all the players
-        /quit                        -  Exit the game
   """
 
   define join, """

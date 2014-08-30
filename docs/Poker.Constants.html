@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Poker.Constants</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+    <script type="text/javascript" charset="utf-8">
+      relpath = '';
+      if (relpath != '') relpath += '/';
+    </script>
+
+    <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+  </head>
+
+  <body>
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+
+    <div id="content">
+      <div class="breadcrumbs">poker v0.0.1 &rarr; <a href="overview.html">Overview</a> &rarr; <a href="Poker.html">Poker</a> &rarr; <a href="Poker.Constants.html">Constants</a></div>
+
+      <h1>
+        Poker.Constants
+        
+      </h1>
+
+      <ul class="summary_links">
+        
+          <li><a href="#summary">Summary</a></li>
+        
+        
+        
+          <li><a href="#macros_details">Macros</a></li>
+        
+        
+        
+      </ul>
+
+      
+        <div id="moduledoc" class="docstring">
+          <p>An alternative to use @constant_name value approach to defined reusable
+constants in elixir.</p>
+<p>This module offers an approach to define these in a
+module that can be shared with other modules. They are implemented with
+macros so they can be used in guards and matches</p>
+<h2>Examples:</h2>
+<p>Create a module to define your shared constants</p>
+<pre><code>defmodule MyConstants do
+  use Poker.Constants
+
+  define something,   10
+  define another,     20
+end</code></pre>
+<p>Use the constants</p>
+<pre><code>defmodule MyModule do
+  require MyConstants
+  alias MyConstants, as: Const
+
+  def myfunc(item) when item == Const.something, do: Const.something + 5
+  def myfunc(item) when item == Const.another, do: Const.another
+end</code></pre>
+
+        </div>
+      
+
+      
+        <a href="https://github.com/mgwidmann/poker/blob/master/lib/constants.ex#L1" class="view_source">Source</a>
+      
+
+      
+        <h2 id="summary">Summary<div class="detail_header_links"><a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a></div></h2>
+        <table class="summary">
+          <tr>
+  <td class="summary_signature"><a href="#constant/2">constant(name, value)</a></td>
+  
+    <td class="summary_synopsis"><p>Define a constant</p>
+</td>
+  
+</tr>
+<tr>
+  <td class="summary_signature"><a href="#define/2">define(name, value)</a></td>
+  
+    <td class="summary_synopsis"><p>Define a constant. An alias for constant</p>
+</td>
+  
+</tr>
+
+        </table>
+      
+
+      
+
+      
+
+      
+        <div id="macros_details" class="details_list">
+          <h2>Macros</h2>
+          <div class="detail">
+  <div class="detail_header" id="constant/2">
+    <span class="signature"><strong>constant(name, value)</strong></span>
+    <div class="detail_header_links">
+      <span class="detail_type">(macro)</span>
+      <a href="#constant/2" class="detail_link" title="Link to this macro">#</a>
+      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
+    </div>
+  </div>
+  
+  <div class="docstring"><p>Define a constant</p>
+</div>
+  
+    <a href="https://github.com/mgwidmann/poker/blob/master/lib/constants.ex#L40" class="view_source">Source</a>
+  
+</div>
+<div class="detail">
+  <div class="detail_header" id="define/2">
+    <span class="signature"><strong>define(name, value)</strong></span>
+    <div class="detail_header_links">
+      <span class="detail_type">(macro)</span>
+      <a href="#define/2" class="detail_link" title="Link to this macro">#</a>
+      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
+    </div>
+  </div>
+  
+  <div class="docstring"><p>Define a constant. An alias for constant</p>
+</div>
+  
+    <a href="https://github.com/mgwidmann/poker/blob/master/lib/constants.ex#L47" class="view_source">Source</a>
+  
+</div>
+
+        </div>
+      
+
+      
+    </div>
+  </body>
+</html>

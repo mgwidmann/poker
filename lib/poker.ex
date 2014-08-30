@@ -1,6 +1,12 @@
 defmodule Poker do
   use Application
 
+  @moduledoc """
+    A Poker CLI application which can be played over the network with other users
+    of the same applicaiton. No server is necessary, all player's machines will
+    cooperate to move the game along.
+  """
+
   # See http://elixir-lang.org/docs/stable/elixir/Application.html
   # for more information on OTP Applications
   def start(_type, _args) do
@@ -9,7 +15,8 @@ defmodule Poker do
     children = [
       # Define workers and child supervisors to be supervised
       worker(Poker.Player, []),
-      worker(Play.Chat, [])
+      worker(Play.Chat, []),
+      worker(Poker.Deck.Server, [])
     ]
 
     # See http://elixir-lang.org/docs/stable/elixir/Supervisor.html

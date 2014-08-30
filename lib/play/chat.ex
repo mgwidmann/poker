@@ -6,6 +6,9 @@ defmodule Play.Chat do
     GenServer.start_link(__MODULE__, [], name: :chat)
   end
 
+  @doc """
+    Sends a message to all players connected to the game.
+  """
   def broadcast(msg) do
     GenServer.multi_call(Node.list, :chat, {:message, Player.name, msg})
   end

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Overview</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+    <script type="text/javascript" charset="utf-8">
+      relpath = '';
+      if (relpath != '') relpath += '/';
+    </script>
+
+    <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+  </head>
+
+  <body>
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+
+    <div id="content">
+      <div class="breadcrumbs">poker v0.0.1 &rarr; <a href="overview.html">Overview</a></div>
+
+      <h1>poker v0.0.1</h1>
+
+      <ul class="summary_links">
+        
+          <li><a href="#modules_summary">Modules</a></li>
+        
+        
+        
+      </ul>
+
+      
+        <h2 id="modules_summary">Modules summary <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a></h2>
+        <table class="summary">
+          <tr>
+  <td class="summary_signature"><a href="Mix.Tasks.Play.html">Mix.Tasks.Play</a></td>
+  
+    <td class="summary_synopsis"><p>Main entry point for playing the game. Simply run <code class="inline">mix play</code> to start up
+  the application!</p>
+</td>
+  
+</tr>
+<tr>
+  <td class="summary_signature"><a href="Play.CLI.html">Play.CLI</a></td>
+  
+</tr>
+<tr>
+  <td class="summary_signature"><a href="Play.Chat.html">Play.Chat</a></td>
+  
+</tr>
+<tr>
+  <td class="summary_signature"><a href="Play.Constants.html">Play.Constants</a></td>
+  
+</tr>
+<tr>
+  <td class="summary_signature"><a href="Poker.html">Poker</a></td>
+  
+    <td class="summary_synopsis"><p>A Poker CLI application which can be played over the network with other users
+  of the same applicaiton. No server is necessary, all player’s machines will
+  cooperate to move the game along</p>
+</td>
+  
+</tr>
+<tr>
+  <td class="summary_signature"><a href="Poker.Constants.html">Poker.Constants</a></td>
+  
+    <td class="summary_synopsis"><p>An alternative to use @constant_name value approach to defined reusable
+constants in elixir</p>
+</td>
+  
+</tr>
+<tr>
+  <td class="summary_signature"><a href="Poker.Deck.html">Poker.Deck</a></td>
+  
+    <td class="summary_synopsis"><p>Struct representing a Deck of cards used during gameplay. The deck keeps track
+  of which cards are available to be drawn from and which have already been used.
+  Additionally, it keeps track of the cards which are in player’s hands (though it
+  doesn’t keep track of which players have which cards)</p>
+</td>
+  
+</tr>
+<tr>
+  <td class="summary_signature"><a href="Poker.Deck.Card.html">Poker.Deck.Card</a></td>
+  
+    <td class="summary_synopsis"><p>A struct representing the data to hold an individual card as well as helper
+  functions for using the cards, such as displaying them</p>
+</td>
+  
+</tr>
+<tr>
+  <td class="summary_signature"><a href="Poker.Deck.Constants.html">Poker.Deck.Constants</a></td>
+  
+</tr>
+<tr>
+  <td class="summary_signature"><a href="Poker.Deck.Server.html">Poker.Deck.Server</a></td>
+  
+    <td class="summary_synopsis"><p>The deck server holds an instance of the deck and maintains manipulating its
+  contents via using the <a href="Poker.Deck.html"><code class="inline">Poker.Deck</code></a> module</p>
+</td>
+  
+</tr>
+<tr>
+  <td class="summary_signature"><a href="Poker.Player.html">Poker.Player</a></td>
+  
+    <td class="summary_synopsis"><p>An erlang process representing the current player on each node. When each
+  node starts up, the <code class="inline">mix play</code> command will prompt the user to set this value
+  and it will stay that way throughout the game. A player’s name is used for
+  joining and identification purposes when chatting</p>
+</td>
+  
+</tr>
+
+        </table>
+      
+
+      
+
+      
+    </div>
+  </body>
+</html>

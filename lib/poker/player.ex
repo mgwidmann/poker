@@ -1,13 +1,20 @@
 defmodule Poker.Player do
   use GenServer
 
+  @moduledoc """
+    An erlang process representing the current player on each node. When each
+    node starts up, the `mix play` command will prompt the user to set this value
+    and it will stay that way throughout the game. A player's name is used for
+    joining and identification purposes when chatting.
+  """
+
   # Initialize and link setup functions for GenServer API
   def init(_) do
     Process.register(self, :player)
     {:ok, %{node_name: node(), name: nil}}
   end
 
-  def start_link([node_name: name] = opts \\ []) do
+  def start_link do
     GenServer.start_link(__MODULE__, :ok, [])
   end
 
@@ -26,7 +33,8 @@ defmodule Poker.Player do
   end
 
   @doc """
-    Get the player name of the supplied PID
+    Get the player name of the supplied PID. This could be a player on another
+    node if you have the PID of that remote process.
   """
   def name(pid) when is_pid(pid)  do
     GenServer.call(pid, :name)

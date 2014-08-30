@@ -30,6 +30,8 @@ Poker is a distributed CLI poker game to play with your friends! Start up the ap
 
 ## Playing
 
+### Getting Ready
+
 #### When the application loads it will ask you for your name
 
     Please enter your name: Joe
@@ -60,7 +62,9 @@ You can talk to any other player by simply typing anything that doesn't start wi
     joe@joes-imac> Hey man whats up?
     joe@joes-imac>
     ...
-    joe@joes-imac: Hey man whats up?
+    fred@joes-imac> joe: Hey man whats up?
     fred@joes-imac>
 
-@TODO
+The purpose of the chat capability is to allow players to talk trash to each other.
+
+### Starting a game

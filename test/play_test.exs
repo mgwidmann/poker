@@ -1,7 +1,6 @@
 defmodule Poker.PlayTest do
   use ExUnit.Case, async: true
   alias Play.CLI
-  import Mix.Tasks.Play
   import ExUnit.CaptureIO
 
   test "#command join terminator" do
