@@ -4,7 +4,7 @@ defmodule Poker.Mixfile do
   def project do
     [app: :poker,
      version: "0.0.1",
-     elixir: "~> 0.15.0",
+     elixir: "~> 1.0",
      source_url: "https://github.com/mgwidmann/poker",
      deps: deps]
   end
@@ -28,8 +28,7 @@ defmodule Poker.Mixfile do
   # Type `mix help deps` for more examples and options
   defp deps do
     [
-      {:ex_doc, "0.5.2"},
-      {:earmark, "0.1.10"}
+      {:earmark, "~> 1.0"}
     ]
   end
 end

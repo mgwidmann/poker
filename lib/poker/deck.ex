@@ -25,7 +25,7 @@ defmodule Poker.Deck do
   end
 
   # Manual struct definition to allow running Deck.new inside the deck field
-  def __struct__() do
+  def __struct__(_args) do
     %{__struct__: __MODULE__, deck: __MODULE__.new(), used: [], in_hand: []}
   end
 
